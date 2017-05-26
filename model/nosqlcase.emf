@@ -102,14 +102,16 @@ class EntidadeAgregada extends Entidade {
   ref RelacionamentoEntidadesAgregadasLink[1] source;
 }
 
-@gmf.link
+@gmf.link(source="source", target="target")
 class RelacionamentoEntidadesAgregadasLink {
   attr TiposCardinalidade cardinalidade;
   ref EntidadeAgregada[+] target;
+    ref EntidadeAgregada[1] source;
 }
 
-@gmf.link
+@gmf.link(source="source", target="target")
 class RelacionamentoNosqlEsquema {
   ref NosqlEsquema[1] target;
+  ref NosqlEsquema[1] source;
 }
 
