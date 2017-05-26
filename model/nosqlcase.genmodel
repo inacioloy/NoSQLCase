@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" copyrightText="" modelDirectory="/nosqlcase/src" modelPluginID="nosqlcase"
+    modelName="Bigdatamodel" importerID="org.eclipse.emf.importer.ecore" complianceLevel="6.0"
+    copyrightFields="false">
+  <foreignModel>nosqlcase.emf</foreignModel>
+  <genPackages prefix="Bigdatamodel" disposableProviderFactory="true" ecorePackage="nosqlcase.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="nosqlcase.ecore#//TiposAtributo">
+      <genEnumLiterals ecoreEnumLiteral="nosqlcase.ecore#//TiposAtributo/SIMPLES"/>
+      <genEnumLiterals ecoreEnumLiteral="nosqlcase.ecore#//TiposAtributo/COMPOSTO"/>
+      <genEnumLiterals ecoreEnumLiteral="nosqlcase.ecore#//TiposAtributo/DERIVADO"/>
+      <genEnumLiterals ecoreEnumLiteral="nosqlcase.ecore#//TiposAtributo/MULTIVALORADO"/>
+      <genEnumLiterals ecoreEnumLiteral="nosqlcase.ecore#//TiposAtributo/IDENTIFICADOR"/>
+      <genEnumLiterals ecoreEnumLiteral="nosqlcase.ecore#//TiposAtributo/DISCRIMINADOR"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="nosqlcase.ecore#//TiposNosql">
+      <genEnumLiterals ecoreEnumLiteral="nosqlcase.ecore#//TiposNosql/DOCUMENT"/>
+      <genEnumLiterals ecoreEnumLiteral="nosqlcase.ecore#//TiposNosql/KEYVALUE"/>
+      <genEnumLiterals ecoreEnumLiteral="nosqlcase.ecore#//TiposNosql/GRAPH"/>
+      <genEnumLiterals ecoreEnumLiteral="nosqlcase.ecore#//TiposNosql/COLUMNS"/>
+      <genEnumLiterals ecoreEnumLiteral="nosqlcase.ecore#//TiposNosql/MULTIMODEL"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="nosqlcase.ecore#//Participacao">
+      <genEnumLiterals ecoreEnumLiteral="nosqlcase.ecore#//Participacao/TOTAL"/>
+      <genEnumLiterals ecoreEnumLiteral="nosqlcase.ecore#//Participacao/PARCIAL"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="nosqlcase.ecore#//TiposCardinalidade">
+      <genEnumLiterals ecoreEnumLiteral="nosqlcase.ecore#//TiposCardinalidade/ONE"/>
+      <genEnumLiterals ecoreEnumLiteral="nosqlcase.ecore#//TiposCardinalidade/MANY"/>
+    </genEnums>
+    <genClasses ecoreClass="nosqlcase.ecore#//Schema">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference nosqlcase.ecore#//Schema/relacionamentoslink"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference nosqlcase.ecore#//Schema/atributosentidadelink"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference nosqlcase.ecore#//Schema/atributosrelacionamentolink"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference nosqlcase.ecore#//Schema/modelosnosql"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference nosqlcase.ecore#//Schema/elementos"/>
+    </genClasses>
+    <genClasses ecoreClass="nosqlcase.ecore#//Entidade">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute nosqlcase.ecore#//Entidade/nome"/>
+    </genClasses>
+    <genClasses ecoreClass="nosqlcase.ecore#//EntidadeBigData"/>
+    <genClasses ecoreClass="nosqlcase.ecore#//Atributo">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute nosqlcase.ecore#//Atributo/nome"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute nosqlcase.ecore#//Atributo/tipoatributo"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute nosqlcase.ecore#//Atributo/obrigatorio"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute nosqlcase.ecore#//Atributo/chavedeparticao"/>
+    </genClasses>
+    <genClasses ecoreClass="nosqlcase.ecore#//Relacionamento">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute nosqlcase.ecore#//Relacionamento/nome"/>
+    </genClasses>
+    <genClasses ecoreClass="nosqlcase.ecore#//RelacionamentoBigData"/>
+    <genClasses ecoreClass="nosqlcase.ecore#//RelacionamentoLink">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute nosqlcase.ecore#//RelacionamentoLink/participacao"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute nosqlcase.ecore#//RelacionamentoLink/cardinalidade"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute nosqlcase.ecore#//RelacionamentoLink/role"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute nosqlcase.ecore#//RelacionamentoLink/identificador"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference nosqlcase.ecore#//RelacionamentoLink/source"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference nosqlcase.ecore#//RelacionamentoLink/target"/>
+    </genClasses>
+    <genClasses ecoreClass="nosqlcase.ecore#//RelacionamentoBigDataLink">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute nosqlcase.ecore#//RelacionamentoBigDataLink/prioritario"/>
+    </genClasses>
+    <genClasses ecoreClass="nosqlcase.ecore#//AtributoEntidadeLink">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference nosqlcase.ecore#//AtributoEntidadeLink/source"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference nosqlcase.ecore#//AtributoEntidadeLink/target"/>
+    </genClasses>
+    <genClasses ecoreClass="nosqlcase.ecore#//AtributoRelacionamentoLink">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference nosqlcase.ecore#//AtributoRelacionamentoLink/source"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference nosqlcase.ecore#//AtributoRelacionamentoLink/target"/>
+    </genClasses>
+    <genClasses ecoreClass="nosqlcase.ecore#//NosqlModel">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute nosqlcase.ecore#//NosqlModel/modelobd"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference nosqlcase.ecore#//NosqlModel/elementos"/>
+    </genClasses>
+    <genClasses ecoreClass="nosqlcase.ecore#//Elemento"/>
+  </genPackages>
+</genmodel:GenModel>

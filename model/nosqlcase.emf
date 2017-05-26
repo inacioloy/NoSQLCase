@@ -1,0 +1,115 @@
+@namespace(uri="bigdatamodel", prefix="bigdatamodel")
+package bigdatamodel;
+
+@gmf.diagram(foo="bar", rcp="false", onefile="true", diagram.extension="eer")
+class Schema {
+  val RelacionamentoLink[*] relacionamentoslink;
+  val AtributoEntidadeLink[*] atributosentidadelink;
+  val AtributoRelacionamentoLink[*] atributosrelacionamentolink;
+  val NosqlEsquema[*] modelosnosql;
+  val Elemento[*] elementos;
+}
+
+@gmf.node(label="nome", figure="rectangle", border.style="solid")
+class Entidade extends Elemento {
+  attr String nome;
+}
+
+@gmf.node(label="nome", figure="rectangle", border.style="dash")
+class EntidadeNaoEstruturada extends Entidade {
+}
+
+@gmf.node(label="nome", figure="ellipse", border.style="solid")
+class Atributo extends Elemento {
+  attr String nome;
+  attr TiposAtributo tipoatributo;
+  attr boolean obrigatorio;
+  attr boolean chavedeparticao;
+}
+
+enum TiposAtributo {
+  SIMPLES = 0;
+  COMPOSTO = 1;
+  DERIVADO = 2;
+  MULTIVALORADO = 3;
+  IDENTIFICADOR = 4;
+  DISCRIMINADOR = 5;
+}
+
+@gmf.node(label="nome", figure="polygon", polygon.x="0 40 80 40 0", polygon.y="40 0 40 80 40", size="90,45", border.style="solid")
+class Relacionamento extends Elemento {
+  attr String nome;
+}
+
+@gmf.link(label="cardinalidade", source="source", target="target", style="solid", width="1", source.decoration="square", incoming="true")
+class RelacionamentoLink {
+  attr Participacao participacao = "TOTAL";
+  attr TiposCardinalidade cardinalidade;
+  attr String role;
+  attr boolean identificador;
+  ref Entidade[1] source;
+  ref Relacionamento[1] target;
+}
+
+enum TiposNosql {
+  DOCUMENT = 0;
+  KEYVALUE = 1;
+  GRAPH = 2;
+  COLUMNS = 3;
+  MULTIMODEL = 4;
+}
+
+enum Participacao {
+  TOTAL = 0;
+  PARCIAL = 1;
+}
+
+@gmf.link(source="source", target="target", style="solid", width="1", source.decoration="none", incoming="true")
+class AtributoEntidadeLink {
+  ref Entidade[1] source;
+  ref Atributo[1] target;
+}
+
+@gmf.link(source="source", target="target", style="solid", width="1", source.decoration="none", incoming="true")
+class AtributoRelacionamentoLink {
+  ref Relacionamento[1] source;
+  ref Atributo[1] target;
+}
+
+enum TiposCardinalidade {
+  ONE = 0;
+  MANY = 1;
+}
+
+@gmf.node(label="modelobd", figure="rectangle", border.style="solid")
+class NosqlEsquema {
+  attr TiposNosql modelobd;
+
+  @gmf.compartment(collapsible="false", width="15")
+  val Elemento[*] elementos;
+  ref RelacionamentoNosqlEsquema[1] source;
+}
+
+class Elemento {
+}
+
+@gmf.node
+class EntidadeSemiEstruturada extends Entidade {
+}
+
+@gmf.node
+class EntidadeAgregada extends Entidade {
+  ref RelacionamentoEntidadesAgregadasLink[1] source;
+}
+
+@gmf.link
+class RelacionamentoEntidadesAgregadasLink {
+  attr TiposCardinalidade cardinalidade;
+  ref EntidadeAgregada[+] target;
+}
+
+@gmf.link
+class RelacionamentoNosqlEsquema {
+  ref NosqlEsquema[1] target;
+}
+
