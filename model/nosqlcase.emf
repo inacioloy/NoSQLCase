@@ -8,9 +8,11 @@ class Schema {
   val AtributoRelacionamentoLink[*] atributosrelacionamentolink;
   val NosqlEsquema[*] modelosnosql;
   val Elemento[*] elementos;
+  val RelacionamentoNosqlEsquema[*] relacionamentosnosqlesquemas;
+  val RelacionamentoEntidadesAgregadasLink[*] relacionamentosentidadesagregadas;
 }
 
-@gmf.node(label="nome", figure="rectangle", border.style="solid")
+@gmf.node(label="nome", figure="rectangle", border.style="solid", label.icon="true",tool.small.bundle="bigdatamodel.edit", tool.small.path="/icons/full/obj16/Entidade.gif")
 class Entidade extends Elemento {
   attr String nome;
 }
@@ -106,12 +108,13 @@ class EntidadeAgregada extends Entidade {
 class RelacionamentoEntidadesAgregadasLink {
   attr TiposCardinalidade cardinalidade;
   ref EntidadeAgregada[+] target;
-    ref EntidadeAgregada[1] source;
+  ref EntidadeAgregada[1] source;
 }
 
 @gmf.link(source="source", target="target")
 class RelacionamentoNosqlEsquema {
   ref NosqlEsquema[1] target;
   ref NosqlEsquema[1] source;
+  attr String[1] descricao;
 }
 
