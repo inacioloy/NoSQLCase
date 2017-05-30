@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="bigdatamodel" nsURI="bigdatamodel" nsPrefix="bigdatamodel">
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="polyglotmodel" nsURI="polyglotmodel" nsPrefix="polyglotmodel">
   <eClassifiers xsi:type="ecore:EClass" name="Schema">
     <eAnnotations source="gmf.diagram">
       <details key="foo" value="bar"/>
@@ -8,20 +8,8 @@
       <details key="onefile" value="true"/>
       <details key="diagram.extension" value="eer"/>
     </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="relacionamentoslink" upperBound="-1"
-        eType="#//RelacionamentoLink" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="atributosentidadelink"
-        upperBound="-1" eType="#//AtributoEntidadeLink" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="atributosrelacionamentolink"
-        upperBound="-1" eType="#//AtributoRelacionamentoLink" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="modelosnosql" upperBound="-1"
         eType="#//NosqlEsquema" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="elementos" upperBound="-1"
-        eType="#//Elemento" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="relacionamentosnosqlesquemas"
-        upperBound="-1" eType="#//RelacionamentoNosqlEsquema" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="relacionamentosentidadesagregadas"
-        upperBound="-1" eType="#//RelacionamentoEntidadesAgregadasLink" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Entidade" eSuperTypes="#//Elemento">
     <eAnnotations source="gmf.node">
@@ -150,6 +138,16 @@
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="source" lowerBound="1"
         eType="#//RelacionamentoNosqlEsquema"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="relacionamentosnosqlesquemas"
+        upperBound="-1" eType="#//RelacionamentoNosqlEsquema" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="atributosrelacionamentolink"
+        upperBound="-1" eType="#//AtributoRelacionamentoLink" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="relacionamentoslink" upperBound="-1"
+        eType="#//RelacionamentoLink" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="atributosentidadelink"
+        upperBound="-1" eType="#//AtributoEntidadeLink" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="relacionamentosentidadesagregadas"
+        upperBound="-1" eType="#//RelacionamentoEntidadesAgregadasLink" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Elemento"/>
   <eClassifiers xsi:type="ecore:EClass" name="EntidadeSemiEstruturada" eSuperTypes="#//Entidade">

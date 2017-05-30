@@ -5,44 +5,9 @@
     xmlns:trace="http://www.eclipse.org/gmf/2006/Trace">
   <nodeTraces
       visualID="2001"
-      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'bigdatamodel' and _eClass_.name = 'EntidadeBigData') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'bigdatamodel' and _eClass_.name = 'Schema') and _containmentMF_.name = 'elementos')">
+      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'polyglotmodel' and _eClass_.name = 'NosqlEsquema') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'polyglotmodel' and _eClass_.name = 'Schema') and _containmentMF_.name = 'modelosnosql')">
     <nodeLabelTraces
-        visualID="5001"
-        queryText="true"/>
-  </nodeTraces>
-  <nodeTraces
-      visualID="2002"
-      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'bigdatamodel' and _eClass_.name = 'RelacionamentoBigData') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'bigdatamodel' and _eClass_.name = 'Schema') and _containmentMF_.name = 'elementos')">
-    <nodeLabelTraces
-        visualID="5002"
-        queryText="true"/>
-  </nodeTraces>
-  <nodeTraces
-      visualID="2003"
-      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'bigdatamodel' and _eClass_.name = 'Entidade') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'bigdatamodel' and _eClass_.name = 'Schema') and _containmentMF_.name = 'elementos')">
-    <nodeLabelTraces
-        visualID="5003"
-        queryText="true"/>
-  </nodeTraces>
-  <nodeTraces
-      visualID="2004"
-      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'bigdatamodel' and _eClass_.name = 'Atributo') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'bigdatamodel' and _eClass_.name = 'Schema') and _containmentMF_.name = 'elementos')">
-    <nodeLabelTraces
-        visualID="5004"
-        queryText="true"/>
-  </nodeTraces>
-  <nodeTraces
-      visualID="2005"
-      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'bigdatamodel' and _eClass_.name = 'Relacionamento') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'bigdatamodel' and _eClass_.name = 'Schema') and _containmentMF_.name = 'elementos')">
-    <nodeLabelTraces
-        visualID="5005"
-        queryText="true"/>
-  </nodeTraces>
-  <nodeTraces
-      visualID="2006"
-      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'bigdatamodel' and _eClass_.name = 'NosqlModel') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'bigdatamodel' and _eClass_.name = 'Schema') and _containmentMF_.name = 'modelosnosql')">
-    <nodeLabelTraces
-        visualID="5011"
+        visualID="5007"
         queryText="true"/>
     <compartmentTraces
         visualID="7001"
@@ -50,57 +15,63 @@
   </nodeTraces>
   <childNodeTraces
       visualID="3001"
-      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'bigdatamodel' and _eClass_.name = 'EntidadeBigData') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'bigdatamodel' and _eClass_.name = 'NosqlModel') and _containmentMF_.name = 'elementos')">
+      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'polyglotmodel' and _eClass_.name = 'EntidadeNaoEstruturada') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'polyglotmodel' and _eClass_.name = 'NosqlEsquema') and _containmentMF_.name = 'elementos')">
     <nodeLabelTraces
-        visualID="5006"
+        visualID="5001"
         queryText="true"/>
   </childNodeTraces>
   <childNodeTraces
       visualID="3002"
-      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'bigdatamodel' and _eClass_.name = 'RelacionamentoBigData') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'bigdatamodel' and _eClass_.name = 'NosqlModel') and _containmentMF_.name = 'elementos')">
+      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'polyglotmodel' and _eClass_.name = 'EntidadeSemiEstruturada') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'polyglotmodel' and _eClass_.name = 'NosqlEsquema') and _containmentMF_.name = 'elementos')">
     <nodeLabelTraces
-        visualID="5007"
+        visualID="5002"
         queryText="true"/>
   </childNodeTraces>
   <childNodeTraces
       visualID="3003"
-      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'bigdatamodel' and _eClass_.name = 'Entidade') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'bigdatamodel' and _eClass_.name = 'NosqlModel') and _containmentMF_.name = 'elementos')">
+      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'polyglotmodel' and _eClass_.name = 'EntidadeAgregada') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'polyglotmodel' and _eClass_.name = 'NosqlEsquema') and _containmentMF_.name = 'elementos')">
     <nodeLabelTraces
-        visualID="5008"
+        visualID="5003"
         queryText="true"/>
   </childNodeTraces>
   <childNodeTraces
       visualID="3004"
-      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'bigdatamodel' and _eClass_.name = 'Atributo') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'bigdatamodel' and _eClass_.name = 'NosqlModel') and _containmentMF_.name = 'elementos')">
+      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'polyglotmodel' and _eClass_.name = 'Entidade') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'polyglotmodel' and _eClass_.name = 'NosqlEsquema') and _containmentMF_.name = 'elementos')">
     <nodeLabelTraces
-        visualID="5009"
+        visualID="5004"
         queryText="true"/>
   </childNodeTraces>
   <childNodeTraces
       visualID="3005"
-      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'bigdatamodel' and _eClass_.name = 'Relacionamento') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'bigdatamodel' and _eClass_.name = 'NosqlModel') and _containmentMF_.name = 'elementos')">
+      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'polyglotmodel' and _eClass_.name = 'Atributo') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'polyglotmodel' and _eClass_.name = 'NosqlEsquema') and _containmentMF_.name = 'elementos')">
     <nodeLabelTraces
-        visualID="5010"
+        visualID="5005"
+        queryText="true"/>
+  </childNodeTraces>
+  <childNodeTraces
+      visualID="3006"
+      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'polyglotmodel' and _eClass_.name = 'Relacionamento') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'polyglotmodel' and _eClass_.name = 'NosqlEsquema') and _containmentMF_.name = 'elementos')">
+    <nodeLabelTraces
+        visualID="5006"
         queryText="true"/>
   </childNodeTraces>
   <linkTraces
       visualID="4001"
-      queryText="modelFacet.oclIsKindOf(gmfgen::TypeLinkModelFacet) and (let _eClass_:ecore::EClass = modelFacet.oclAsType(gmfgen::TypeLinkModelFacet).metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'bigdatamodel' and _eClass_.name = 'RelacionamentoBigDataLink')">
+      queryText="modelFacet.oclIsKindOf(gmfgen::TypeLinkModelFacet) and (let _eClass_:ecore::EClass = modelFacet.oclAsType(gmfgen::TypeLinkModelFacet).metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'polyglotmodel' and _eClass_.name = 'RelacionamentoLink')">
     <linkLabelTraces
         visualID="6001"
         queryText="true"/>
   </linkTraces>
   <linkTraces
       visualID="4002"
-      queryText="modelFacet.oclIsKindOf(gmfgen::TypeLinkModelFacet) and (let _eClass_:ecore::EClass = modelFacet.oclAsType(gmfgen::TypeLinkModelFacet).metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'bigdatamodel' and _eClass_.name = 'RelacionamentoLink')">
-    <linkLabelTraces
-        visualID="6002"
-        queryText="true"/>
-  </linkTraces>
+      queryText="modelFacet.oclIsKindOf(gmfgen::TypeLinkModelFacet) and (let _eClass_:ecore::EClass = modelFacet.oclAsType(gmfgen::TypeLinkModelFacet).metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'polyglotmodel' and _eClass_.name = 'AtributoEntidadeLink')"/>
   <linkTraces
       visualID="4003"
-      queryText="modelFacet.oclIsKindOf(gmfgen::TypeLinkModelFacet) and (let _eClass_:ecore::EClass = modelFacet.oclAsType(gmfgen::TypeLinkModelFacet).metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'bigdatamodel' and _eClass_.name = 'AtributoEntidadeLink')"/>
+      queryText="modelFacet.oclIsKindOf(gmfgen::TypeLinkModelFacet) and (let _eClass_:ecore::EClass = modelFacet.oclAsType(gmfgen::TypeLinkModelFacet).metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'polyglotmodel' and _eClass_.name = 'AtributoRelacionamentoLink')"/>
   <linkTraces
       visualID="4004"
-      queryText="modelFacet.oclIsKindOf(gmfgen::TypeLinkModelFacet) and (let _eClass_:ecore::EClass = modelFacet.oclAsType(gmfgen::TypeLinkModelFacet).metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'bigdatamodel' and _eClass_.name = 'AtributoRelacionamentoLink')"/>
+      queryText="modelFacet.oclIsKindOf(gmfgen::TypeLinkModelFacet) and (let _eClass_:ecore::EClass = modelFacet.oclAsType(gmfgen::TypeLinkModelFacet).metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'polyglotmodel' and _eClass_.name = 'RelacionamentoEntidadesAgregadasLink')"/>
+  <linkTraces
+      visualID="4005"
+      queryText="modelFacet.oclIsKindOf(gmfgen::TypeLinkModelFacet) and (let _eClass_:ecore::EClass = modelFacet.oclAsType(gmfgen::TypeLinkModelFacet).metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'polyglotmodel' and _eClass_.name = 'RelacionamentoNosqlEsquema')"/>
 </trace:TraceModel>

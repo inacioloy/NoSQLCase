@@ -8,184 +8,156 @@
     xmlns:gmftool="http://www.eclipse.org/gmf/2005/ToolDefinition">
   <nodes>
     <containmentFeature
-        href="nosqlcase.ecore#//Schema/elementos"/>
-    <ownedChild>
+        href="nosqlcase.ecore#//Schema/modelosnosql"/>
+    <ownedChild
+        relatedDiagrams="//@diagram">
       <domainMetaElement
-          href="nosqlcase.ecore#//EntidadeBigData"/>
+          href="nosqlcase.ecore#//NosqlEsquema"/>
       <labelMappings
           xsi:type="gmfmap:FeatureLabelMapping">
         <diagramLabel
-            href="nosqlcase.gmfgraph#EntidadeBigDataLabel"/>
+            href="nosqlcase.gmfgraph#NosqlEsquemaLabel"/>
         <features
-            href="nosqlcase.ecore#//Entidade/nome"/>
-      </labelMappings>
-      <tool
-          xsi:type="gmftool:CreationTool"
-          href="nosqlcase.gmftool#//@palette/@tools.0/@tools.2"/>
-      <diagramNode
-          href="nosqlcase.gmfgraph#EntidadeBigData"/>
-    </ownedChild>
-  </nodes>
-  <nodes>
-    <containmentFeature
-        href="nosqlcase.ecore#//Schema/elementos"/>
-    <ownedChild>
-      <domainMetaElement
-          href="nosqlcase.ecore#//RelacionamentoBigData"/>
-      <labelMappings
-          xsi:type="gmfmap:FeatureLabelMapping">
-        <diagramLabel
-            href="nosqlcase.gmfgraph#RelacionamentoBigDataLabel"/>
-        <features
-            href="nosqlcase.ecore#//Relacionamento/nome"/>
+            href="nosqlcase.ecore#//NosqlEsquema/modelobd"/>
       </labelMappings>
       <tool
           xsi:type="gmftool:CreationTool"
           href="nosqlcase.gmftool#//@palette/@tools.0/@tools.5"/>
       <diagramNode
-          href="nosqlcase.gmfgraph#RelacionamentoBigData"/>
-    </ownedChild>
-  </nodes>
-  <nodes>
-    <containmentFeature
-        href="nosqlcase.ecore#//Schema/elementos"/>
-    <ownedChild>
-      <domainMetaElement
-          href="nosqlcase.ecore#//Entidade"/>
-      <labelMappings
-          xsi:type="gmfmap:FeatureLabelMapping">
-        <diagramLabel
-            href="nosqlcase.gmfgraph#EntidadeLabel"/>
-        <features
-            href="nosqlcase.ecore#//Entidade/nome"/>
-      </labelMappings>
-      <tool
-          xsi:type="gmftool:CreationTool"
-          href="nosqlcase.gmftool#//@palette/@tools.0/@tools.1"/>
-      <diagramNode
-          href="nosqlcase.gmfgraph#Entidade"/>
-    </ownedChild>
-  </nodes>
-  <nodes>
-    <containmentFeature
-        href="nosqlcase.ecore#//Schema/elementos"/>
-    <ownedChild>
-      <domainMetaElement
-          href="nosqlcase.ecore#//Atributo"/>
-      <labelMappings
-          xsi:type="gmfmap:FeatureLabelMapping">
-        <diagramLabel
-            href="nosqlcase.gmfgraph#AtributoLabel"/>
-        <features
-            href="nosqlcase.ecore#//Atributo/nome"/>
-      </labelMappings>
-      <tool
-          xsi:type="gmftool:CreationTool"
-          href="nosqlcase.gmftool#//@palette/@tools.0/@tools.0"/>
-      <diagramNode
-          href="nosqlcase.gmfgraph#Atributo"/>
-    </ownedChild>
-  </nodes>
-  <nodes>
-    <containmentFeature
-        href="nosqlcase.ecore#//Schema/elementos"/>
-    <ownedChild>
-      <domainMetaElement
-          href="nosqlcase.ecore#//Relacionamento"/>
-      <labelMappings
-          xsi:type="gmfmap:FeatureLabelMapping">
-        <diagramLabel
-            href="nosqlcase.gmfgraph#RelacionamentoLabel"/>
-        <features
-            href="nosqlcase.ecore#//Relacionamento/nome"/>
-      </labelMappings>
-      <tool
-          xsi:type="gmftool:CreationTool"
-          href="nosqlcase.gmftool#//@palette/@tools.0/@tools.4"/>
-      <diagramNode
-          href="nosqlcase.gmfgraph#Relacionamento"/>
-    </ownedChild>
-  </nodes>
-  <nodes>
-    <containmentFeature
-        href="nosqlcase.ecore#//Schema/modelosnosql"/>
-    <ownedChild
-        relatedDiagrams="//@diagram">
-      <domainMetaElement
-          href="nosqlcase.ecore#//NosqlModel"/>
-      <labelMappings
-          xsi:type="gmfmap:FeatureLabelMapping">
-        <diagramLabel
-            href="nosqlcase.gmfgraph#NosqlModelLabel"/>
-        <features
-            href="nosqlcase.ecore#//NosqlModel/modelobd"/>
-      </labelMappings>
-      <tool
-          xsi:type="gmftool:CreationTool"
-          href="nosqlcase.gmftool#//@palette/@tools.0/@tools.3"/>
-      <diagramNode
-          href="nosqlcase.gmfgraph#NosqlModel"/>
+          href="nosqlcase.gmfgraph#NosqlEsquema"/>
       <children
-          compartment="//@nodes.5/@ownedChild/@compartments.0"
-          referencedChild="//@nodes.0/@ownedChild">
+          compartment="//@nodes.0/@ownedChild/@compartments.0">
         <containmentFeature
-            href="nosqlcase.ecore#//NosqlModel/elementos"/>
+            href="nosqlcase.ecore#//NosqlEsquema/elementos"/>
+        <ownedChild>
+          <domainMetaElement
+              href="nosqlcase.ecore#//EntidadeNaoEstruturada"/>
+          <labelMappings
+              xsi:type="gmfmap:FeatureLabelMapping">
+            <diagramLabel
+                href="nosqlcase.gmfgraph#EntidadeNaoEstruturadaLabel"/>
+            <features
+                href="nosqlcase.ecore#//Entidade/nome"/>
+          </labelMappings>
+          <tool
+              xsi:type="gmftool:CreationTool"
+              href="nosqlcase.gmftool#//@palette/@tools.0/@tools.3"/>
+          <diagramNode
+              href="nosqlcase.gmfgraph#EntidadeNaoEstruturada"/>
+        </ownedChild>
       </children>
       <children
-          compartment="//@nodes.5/@ownedChild/@compartments.0"
-          referencedChild="//@nodes.1/@ownedChild">
+          compartment="//@nodes.0/@ownedChild/@compartments.0">
         <containmentFeature
-            href="nosqlcase.ecore#//NosqlModel/elementos"/>
+            href="nosqlcase.ecore#//NosqlEsquema/elementos"/>
+        <ownedChild>
+          <domainMetaElement
+              href="nosqlcase.ecore#//EntidadeSemiEstruturada"/>
+          <labelMappings
+              xsi:type="gmfmap:FeatureLabelMapping">
+            <diagramLabel
+                href="nosqlcase.gmfgraph#EntidadeSemiEstruturadaLabel"/>
+            <features
+                href="nosqlcase.ecore#//Entidade/nome"/>
+          </labelMappings>
+          <tool
+              xsi:type="gmftool:CreationTool"
+              href="nosqlcase.gmftool#//@palette/@tools.0/@tools.4"/>
+          <diagramNode
+              href="nosqlcase.gmfgraph#EntidadeSemiEstruturada"/>
+        </ownedChild>
       </children>
       <children
-          compartment="//@nodes.5/@ownedChild/@compartments.0"
-          referencedChild="//@nodes.2/@ownedChild">
+          compartment="//@nodes.0/@ownedChild/@compartments.0">
         <containmentFeature
-            href="nosqlcase.ecore#//NosqlModel/elementos"/>
+            href="nosqlcase.ecore#//NosqlEsquema/elementos"/>
+        <ownedChild>
+          <domainMetaElement
+              href="nosqlcase.ecore#//EntidadeAgregada"/>
+          <labelMappings
+              xsi:type="gmfmap:FeatureLabelMapping">
+            <diagramLabel
+                href="nosqlcase.gmfgraph#EntidadeAgregadaLabel"/>
+            <features
+                href="nosqlcase.ecore#//Entidade/nome"/>
+          </labelMappings>
+          <tool
+              xsi:type="gmftool:CreationTool"
+              href="nosqlcase.gmftool#//@palette/@tools.0/@tools.2"/>
+          <diagramNode
+              href="nosqlcase.gmfgraph#EntidadeAgregada"/>
+        </ownedChild>
       </children>
       <children
-          compartment="//@nodes.5/@ownedChild/@compartments.0"
-          referencedChild="//@nodes.3/@ownedChild">
+          compartment="//@nodes.0/@ownedChild/@compartments.0">
         <containmentFeature
-            href="nosqlcase.ecore#//NosqlModel/elementos"/>
+            href="nosqlcase.ecore#//NosqlEsquema/elementos"/>
+        <ownedChild>
+          <domainMetaElement
+              href="nosqlcase.ecore#//Entidade"/>
+          <labelMappings
+              xsi:type="gmfmap:FeatureLabelMapping">
+            <diagramLabel
+                href="nosqlcase.gmfgraph#EntidadeLabel"/>
+            <features
+                href="nosqlcase.ecore#//Entidade/nome"/>
+          </labelMappings>
+          <tool
+              xsi:type="gmftool:CreationTool"
+              href="nosqlcase.gmftool#//@palette/@tools.0/@tools.1"/>
+          <diagramNode
+              href="nosqlcase.gmfgraph#Entidade"/>
+        </ownedChild>
       </children>
       <children
-          compartment="//@nodes.5/@ownedChild/@compartments.0"
-          referencedChild="//@nodes.4/@ownedChild">
+          compartment="//@nodes.0/@ownedChild/@compartments.0">
         <containmentFeature
-            href="nosqlcase.ecore#//NosqlModel/elementos"/>
+            href="nosqlcase.ecore#//NosqlEsquema/elementos"/>
+        <ownedChild>
+          <domainMetaElement
+              href="nosqlcase.ecore#//Atributo"/>
+          <labelMappings
+              xsi:type="gmfmap:FeatureLabelMapping">
+            <diagramLabel
+                href="nosqlcase.gmfgraph#AtributoLabel"/>
+            <features
+                href="nosqlcase.ecore#//Atributo/nome"/>
+          </labelMappings>
+          <tool
+              xsi:type="gmftool:CreationTool"
+              href="nosqlcase.gmftool#//@palette/@tools.0/@tools.0"/>
+          <diagramNode
+              href="nosqlcase.gmfgraph#Atributo"/>
+        </ownedChild>
+      </children>
+      <children
+          compartment="//@nodes.0/@ownedChild/@compartments.0">
+        <containmentFeature
+            href="nosqlcase.ecore#//NosqlEsquema/elementos"/>
+        <ownedChild>
+          <domainMetaElement
+              href="nosqlcase.ecore#//Relacionamento"/>
+          <labelMappings
+              xsi:type="gmfmap:FeatureLabelMapping">
+            <diagramLabel
+                href="nosqlcase.gmfgraph#RelacionamentoLabel"/>
+            <features
+                href="nosqlcase.ecore#//Relacionamento/nome"/>
+          </labelMappings>
+          <tool
+              xsi:type="gmftool:CreationTool"
+              href="nosqlcase.gmftool#//@palette/@tools.0/@tools.6"/>
+          <diagramNode
+              href="nosqlcase.gmfgraph#Relacionamento"/>
+        </ownedChild>
       </children>
       <compartments
-          children="//@nodes.5/@ownedChild/@children.0 //@nodes.5/@ownedChild/@children.1 //@nodes.5/@ownedChild/@children.2 //@nodes.5/@ownedChild/@children.3 //@nodes.5/@ownedChild/@children.4">
+          children="//@nodes.0/@ownedChild/@children.0 //@nodes.0/@ownedChild/@children.1 //@nodes.0/@ownedChild/@children.2 //@nodes.0/@ownedChild/@children.3 //@nodes.0/@ownedChild/@children.4 //@nodes.0/@ownedChild/@children.5">
         <compartment
-            href="nosqlcase.gmfgraph#NosqlModelElementosCompartment"/>
+            href="nosqlcase.gmfgraph#NosqlEsquemaElementosCompartment"/>
       </compartments>
     </ownedChild>
   </nodes>
-  <links>
-    <domainMetaElement
-        href="nosqlcase.ecore#//RelacionamentoBigDataLink"/>
-    <labelMappings
-        xsi:type="gmfmap:FeatureLabelMapping">
-      <diagramLabel
-          href="nosqlcase.gmfgraph#RelacionamentoBigDataLinkLabel"/>
-      <features
-          href="nosqlcase.ecore#//RelacionamentoLink/cardinalidade"/>
-    </labelMappings>
-    <containmentFeature
-        href="nosqlcase.ecore#//Schema/relacionamentoslink"/>
-    <tool
-        xsi:type="gmftool:CreationTool"
-        href="nosqlcase.gmftool#//@palette/@tools.1/@tools.2"/>
-    <diagramLink
-        href="nosqlcase.gmfgraph#RelacionamentoBigDataLink"/>
-    <sourceMetaFeature
-        xsi:type="ecore:EReference"
-        href="nosqlcase.ecore#//RelacionamentoLink/source"/>
-    <linkMetaFeature
-        xsi:type="ecore:EReference"
-        href="nosqlcase.ecore#//RelacionamentoLink/target"/>
-  </links>
   <links>
     <domainMetaElement
         href="nosqlcase.ecore#//RelacionamentoLink"/>
@@ -197,7 +169,7 @@
           href="nosqlcase.ecore#//RelacionamentoLink/cardinalidade"/>
     </labelMappings>
     <containmentFeature
-        href="nosqlcase.ecore#//Schema/relacionamentoslink"/>
+        href="nosqlcase.ecore#//NosqlEsquema/relacionamentoslink"/>
     <tool
         xsi:type="gmftool:CreationTool"
         href="nosqlcase.gmftool#//@palette/@tools.1/@tools.3"/>
@@ -214,7 +186,7 @@
     <domainMetaElement
         href="nosqlcase.ecore#//AtributoEntidadeLink"/>
     <containmentFeature
-        href="nosqlcase.ecore#//Schema/atributosentidadelink"/>
+        href="nosqlcase.ecore#//NosqlEsquema/atributosentidadelink"/>
     <tool
         xsi:type="gmftool:CreationTool"
         href="nosqlcase.gmftool#//@palette/@tools.1/@tools.0"/>
@@ -231,7 +203,7 @@
     <domainMetaElement
         href="nosqlcase.ecore#//AtributoRelacionamentoLink"/>
     <containmentFeature
-        href="nosqlcase.ecore#//Schema/atributosrelacionamentolink"/>
+        href="nosqlcase.ecore#//NosqlEsquema/atributosrelacionamentolink"/>
     <tool
         xsi:type="gmftool:CreationTool"
         href="nosqlcase.gmftool#//@palette/@tools.1/@tools.1"/>
@@ -244,9 +216,43 @@
         xsi:type="ecore:EReference"
         href="nosqlcase.ecore#//AtributoRelacionamentoLink/target"/>
   </links>
+  <links>
+    <domainMetaElement
+        href="nosqlcase.ecore#//RelacionamentoEntidadesAgregadasLink"/>
+    <containmentFeature
+        href="nosqlcase.ecore#//NosqlEsquema/relacionamentosentidadesagregadas"/>
+    <tool
+        xsi:type="gmftool:CreationTool"
+        href="nosqlcase.gmftool#//@palette/@tools.1/@tools.2"/>
+    <diagramLink
+        href="nosqlcase.gmfgraph#RelacionamentoEntidadesAgregadasLink"/>
+    <sourceMetaFeature
+        xsi:type="ecore:EReference"
+        href="nosqlcase.ecore#//RelacionamentoEntidadesAgregadasLink/source"/>
+    <linkMetaFeature
+        xsi:type="ecore:EReference"
+        href="nosqlcase.ecore#//RelacionamentoEntidadesAgregadasLink/target"/>
+  </links>
+  <links>
+    <domainMetaElement
+        href="nosqlcase.ecore#//RelacionamentoNosqlEsquema"/>
+    <containmentFeature
+        href="nosqlcase.ecore#//NosqlEsquema/relacionamentosnosqlesquemas"/>
+    <tool
+        xsi:type="gmftool:CreationTool"
+        href="nosqlcase.gmftool#//@palette/@tools.1/@tools.4"/>
+    <diagramLink
+        href="nosqlcase.gmfgraph#RelacionamentoNosqlEsquema"/>
+    <sourceMetaFeature
+        xsi:type="ecore:EReference"
+        href="nosqlcase.ecore#//RelacionamentoNosqlEsquema/source"/>
+    <linkMetaFeature
+        xsi:type="ecore:EReference"
+        href="nosqlcase.ecore#//RelacionamentoNosqlEsquema/target"/>
+  </links>
   <diagram>
     <diagramCanvas
-        href="nosqlcase.gmfgraph#bigdatamodel"/>
+        href="nosqlcase.gmfgraph#polyglotmodel"/>
     <domainModel
         href="nosqlcase.ecore#/"/>
     <domainMetaElement

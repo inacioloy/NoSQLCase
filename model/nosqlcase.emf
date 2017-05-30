@@ -1,18 +1,12 @@
-@namespace(uri="bigdatamodel", prefix="bigdatamodel")
-package bigdatamodel;
+@namespace(uri="polyglotmodel", prefix="polyglotmodel")
+package polyglotmodel;
 
 @gmf.diagram(foo="bar", rcp="false", onefile="true", diagram.extension="eer")
 class Schema {
-  val RelacionamentoLink[*] relacionamentoslink;
-  val AtributoEntidadeLink[*] atributosentidadelink;
-  val AtributoRelacionamentoLink[*] atributosrelacionamentolink;
   val NosqlEsquema[*] modelosnosql;
-  val Elemento[*] elementos;
-  val RelacionamentoNosqlEsquema[*] relacionamentosnosqlesquemas;
-  val RelacionamentoEntidadesAgregadasLink[*] relacionamentosentidadesagregadas;
 }
 
-@gmf.node(label="nome", figure="rectangle", border.style="solid", label.icon="true",tool.small.bundle="bigdatamodel.edit", tool.small.path="/icons/full/obj16/Entidade.gif")
+@gmf.node(label="nome", figure="rectangle", border.style="solid", label.icon="true", tool.small.bundle="bigdatamodel.edit", tool.small.path="/icons/full/obj16/Entidade.gif")
 class Entidade extends Elemento {
   attr String nome;
 }
@@ -43,7 +37,7 @@ class Relacionamento extends Elemento {
   attr String nome;
 }
 
-@gmf.link(label="cardinalidade", source="source", target="target", style="solid", width="1", source.decoration="square", incoming="true")
+@gmf.link(label="cardinalidade", source="source", target="target", style="solid", width="1",  incoming="true")
 class RelacionamentoLink {
   attr Participacao participacao = "TOTAL";
   attr TiposCardinalidade cardinalidade;
@@ -90,6 +84,11 @@ class NosqlEsquema {
   @gmf.compartment(collapsible="false", width="15")
   val Elemento[*] elementos;
   ref RelacionamentoNosqlEsquema[1] source;
+  val RelacionamentoNosqlEsquema[*] relacionamentosnosqlesquemas;
+  val AtributoRelacionamentoLink[*] atributosrelacionamentolink;
+  val RelacionamentoLink[*] relacionamentoslink;
+  val AtributoEntidadeLink[*] atributosentidadelink;
+  val RelacionamentoEntidadesAgregadasLink[*] relacionamentosentidadesagregadas;
 }
 
 class Elemento {
@@ -104,7 +103,7 @@ class EntidadeAgregada extends Entidade {
   ref RelacionamentoEntidadesAgregadasLink[1] source;
 }
 
-@gmf.link(source="source", target="target")
+@gmf.link(source="source", target="target", target.decoration="arrow")
 class RelacionamentoEntidadesAgregadasLink {
   attr TiposCardinalidade cardinalidade;
   ref EntidadeAgregada[+] target;

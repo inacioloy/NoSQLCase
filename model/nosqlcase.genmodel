@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
-    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" copyrightText="" modelDirectory="/nosqlcase/src" modelPluginID="nosqlcase"
-    modelName="Bigdatamodel" importerID="org.eclipse.emf.importer.ecore" complianceLevel="6.0"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" copyrightText="" modelDirectory="/nosql_case/src" modelPluginID="nosql_case"
+    modelName="Polyglotmodel" importerID="org.eclipse.emf.importer.ecore" complianceLevel="6.0"
     copyrightFields="false">
   <foreignModel>nosqlcase.emf</foreignModel>
-  <genPackages prefix="Bigdatamodel" disposableProviderFactory="true" ecorePackage="nosqlcase.ecore#/">
+  <genPackages prefix="Polyglotmodel" disposableProviderFactory="true" ecorePackage="nosqlcase.ecore#/">
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="nosqlcase.ecore#//TiposAtributo">
       <genEnumLiterals ecoreEnumLiteral="nosqlcase.ecore#//TiposAtributo/SIMPLES"/>
       <genEnumLiterals ecoreEnumLiteral="nosqlcase.ecore#//TiposAtributo/COMPOSTO"/>
@@ -29,16 +29,12 @@
       <genEnumLiterals ecoreEnumLiteral="nosqlcase.ecore#//TiposCardinalidade/MANY"/>
     </genEnums>
     <genClasses ecoreClass="nosqlcase.ecore#//Schema">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference nosqlcase.ecore#//Schema/relacionamentoslink"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference nosqlcase.ecore#//Schema/atributosentidadelink"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference nosqlcase.ecore#//Schema/atributosrelacionamentolink"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference nosqlcase.ecore#//Schema/modelosnosql"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference nosqlcase.ecore#//Schema/elementos"/>
     </genClasses>
     <genClasses ecoreClass="nosqlcase.ecore#//Entidade">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute nosqlcase.ecore#//Entidade/nome"/>
     </genClasses>
-    <genClasses ecoreClass="nosqlcase.ecore#//EntidadeBigData"/>
+    <genClasses ecoreClass="nosqlcase.ecore#//EntidadeNaoEstruturada"/>
     <genClasses ecoreClass="nosqlcase.ecore#//Atributo">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute nosqlcase.ecore#//Atributo/nome"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute nosqlcase.ecore#//Atributo/tipoatributo"/>
@@ -48,7 +44,6 @@
     <genClasses ecoreClass="nosqlcase.ecore#//Relacionamento">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute nosqlcase.ecore#//Relacionamento/nome"/>
     </genClasses>
-    <genClasses ecoreClass="nosqlcase.ecore#//RelacionamentoBigData"/>
     <genClasses ecoreClass="nosqlcase.ecore#//RelacionamentoLink">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute nosqlcase.ecore#//RelacionamentoLink/participacao"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute nosqlcase.ecore#//RelacionamentoLink/cardinalidade"/>
@@ -56,9 +51,6 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute nosqlcase.ecore#//RelacionamentoLink/identificador"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference nosqlcase.ecore#//RelacionamentoLink/source"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference nosqlcase.ecore#//RelacionamentoLink/target"/>
-    </genClasses>
-    <genClasses ecoreClass="nosqlcase.ecore#//RelacionamentoBigDataLink">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute nosqlcase.ecore#//RelacionamentoBigDataLink/prioritario"/>
     </genClasses>
     <genClasses ecoreClass="nosqlcase.ecore#//AtributoEntidadeLink">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference nosqlcase.ecore#//AtributoEntidadeLink/source"/>
@@ -68,10 +60,30 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference nosqlcase.ecore#//AtributoRelacionamentoLink/source"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference nosqlcase.ecore#//AtributoRelacionamentoLink/target"/>
     </genClasses>
-    <genClasses ecoreClass="nosqlcase.ecore#//NosqlModel">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute nosqlcase.ecore#//NosqlModel/modelobd"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference nosqlcase.ecore#//NosqlModel/elementos"/>
+    <genClasses ecoreClass="nosqlcase.ecore#//NosqlEsquema">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute nosqlcase.ecore#//NosqlEsquema/modelobd"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference nosqlcase.ecore#//NosqlEsquema/elementos"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference nosqlcase.ecore#//NosqlEsquema/source"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference nosqlcase.ecore#//NosqlEsquema/relacionamentosnosqlesquemas"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference nosqlcase.ecore#//NosqlEsquema/atributosrelacionamentolink"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference nosqlcase.ecore#//NosqlEsquema/relacionamentoslink"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference nosqlcase.ecore#//NosqlEsquema/atributosentidadelink"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference nosqlcase.ecore#//NosqlEsquema/relacionamentosentidadesagregadas"/>
     </genClasses>
     <genClasses ecoreClass="nosqlcase.ecore#//Elemento"/>
+    <genClasses ecoreClass="nosqlcase.ecore#//EntidadeSemiEstruturada"/>
+    <genClasses ecoreClass="nosqlcase.ecore#//EntidadeAgregada">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference nosqlcase.ecore#//EntidadeAgregada/source"/>
+    </genClasses>
+    <genClasses ecoreClass="nosqlcase.ecore#//RelacionamentoEntidadesAgregadasLink">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute nosqlcase.ecore#//RelacionamentoEntidadesAgregadasLink/cardinalidade"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference nosqlcase.ecore#//RelacionamentoEntidadesAgregadasLink/target"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference nosqlcase.ecore#//RelacionamentoEntidadesAgregadasLink/source"/>
+    </genClasses>
+    <genClasses ecoreClass="nosqlcase.ecore#//RelacionamentoNosqlEsquema">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference nosqlcase.ecore#//RelacionamentoNosqlEsquema/target"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference nosqlcase.ecore#//RelacionamentoNosqlEsquema/source"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute nosqlcase.ecore#//RelacionamentoNosqlEsquema/descricao"/>
+    </genClasses>
   </genPackages>
 </genmodel:GenModel>

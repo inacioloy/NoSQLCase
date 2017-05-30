@@ -1,14 +1,6 @@
 <?xml version="1.0" encoding="ASCII"?>
-<gmfgraph:Canvas xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gmfgraph="http://www.eclipse.org/gmf/2006/GraphicalDefinition" name="bigdatamodel">
+<gmfgraph:Canvas xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gmfgraph="http://www.eclipse.org/gmf/2006/GraphicalDefinition" name="polyglotmodel">
   <figures name="Default">
-    <figures xsi:type="gmfgraph:PolygonDecoration" name="Sqare">
-      <backgroundColor xsi:type="gmfgraph:ConstantColor"/>
-      <template y="1"/>
-      <template x="-1" y="1"/>
-      <template x="-1" y="-1"/>
-      <template y="-1"/>
-      <template y="1"/>
-    </figures>
     <figures xsi:type="gmfgraph:PolygonDecoration" name="Sqare">
       <backgroundColor xsi:type="gmfgraph:ConstantColor"/>
       <template y="1"/>
@@ -26,14 +18,14 @@
       </actualFigure>
       <accessors accessor="getFigureEntidadeLabelFigure" figure="//@figures.0/@descriptors.0/@actualFigure/@children.0"/>
     </descriptors>
-    <descriptors name="EntidadeBigDataFigure">
-      <actualFigure xsi:type="gmfgraph:Rectangle" name="EntidadeBigDataFigure" lineKind="LINE_DASH">
+    <descriptors name="EntidadeNaoEstruturadaFigure">
+      <actualFigure xsi:type="gmfgraph:Rectangle" name="EntidadeNaoEstruturadaFigure" lineKind="LINE_DASH">
         <border xsi:type="gmfgraph:MarginBorder">
           <insets top="5" left="5" bottom="5" right="5"/>
         </border>
-        <children xsi:type="gmfgraph:Label" name="EntidadeBigDataLabelFigure" text="EntidadeBigData"/>
+        <children xsi:type="gmfgraph:Label" name="EntidadeNaoEstruturadaLabelFigure" text="EntidadeNaoEstruturada"/>
       </actualFigure>
-      <accessors accessor="getFigureEntidadeBigDataLabelFigure" figure="//@figures.0/@descriptors.1/@actualFigure/@children.0"/>
+      <accessors accessor="getFigureEntidadeNaoEstruturadaLabelFigure" figure="//@figures.0/@descriptors.1/@actualFigure/@children.0"/>
     </descriptors>
     <descriptors name="AtributoFigure">
       <actualFigure xsi:type="gmfgraph:Ellipse" name="AtributoFigure">
@@ -59,33 +51,36 @@
       </actualFigure>
       <accessors accessor="getFigureRelacionamentoLabelFigure" figure="//@figures.0/@descriptors.3/@actualFigure/@children.0"/>
     </descriptors>
-    <descriptors name="RelacionamentoBigDataFigure">
-      <actualFigure xsi:type="gmfgraph:ScalablePolygon" name="RelacionamentoBigDataFigure" lineKind="LINE_DASH">
-        <preferredSize dx="90" dy="45"/>
+    <descriptors name="NosqlEsquemaFigure">
+      <actualFigure xsi:type="gmfgraph:Rectangle" name="NosqlEsquemaFigure">
         <border xsi:type="gmfgraph:MarginBorder">
           <insets top="5" left="5" bottom="5" right="5"/>
         </border>
-        <children xsi:type="gmfgraph:Label" name="RelacionamentoBigDataLabelFigure" text="RelacionamentoBigData"/>
-        <template y="40"/>
-        <template x="40"/>
-        <template x="80" y="40"/>
-        <template x="40" y="80"/>
-        <template y="40"/>
-      </actualFigure>
-      <accessors accessor="getFigureRelacionamentoBigDataLabelFigure" figure="//@figures.0/@descriptors.4/@actualFigure/@children.0"/>
-    </descriptors>
-    <descriptors name="NosqlModelFigure">
-      <actualFigure xsi:type="gmfgraph:Rectangle" name="NosqlModelFigure">
-        <border xsi:type="gmfgraph:MarginBorder">
-          <insets top="5" left="5" bottom="5" right="5"/>
-        </border>
-        <children xsi:type="gmfgraph:Label" name="NosqlModelLabelFigure" text="NosqlModel">
+        <children xsi:type="gmfgraph:Label" name="NosqlEsquemaLabelFigure" text="NosqlEsquema">
           <maximumSize dx="10000" dy="50"/>
         </children>
-        <children xsi:type="gmfgraph:Rectangle" name="NosqlModelElementosCompartmentFigure" outline="false"/>
+        <children xsi:type="gmfgraph:Rectangle" name="NosqlEsquemaElementosCompartmentFigure" outline="false"/>
       </actualFigure>
-      <accessors accessor="getFigureNosqlModelLabelFigure" figure="//@figures.0/@descriptors.5/@actualFigure/@children.0"/>
-      <accessors accessor="getNosqlModelElementosCompartmentFigure" figure="//@figures.0/@descriptors.5/@actualFigure/@children.1"/>
+      <accessors accessor="getFigureNosqlEsquemaLabelFigure" figure="//@figures.0/@descriptors.4/@actualFigure/@children.0"/>
+      <accessors accessor="getNosqlEsquemaElementosCompartmentFigure" figure="//@figures.0/@descriptors.4/@actualFigure/@children.1"/>
+    </descriptors>
+    <descriptors name="EntidadeSemiEstruturadaFigure">
+      <actualFigure xsi:type="gmfgraph:Rectangle" name="EntidadeSemiEstruturadaFigure">
+        <border xsi:type="gmfgraph:MarginBorder">
+          <insets top="5" left="5" bottom="5" right="5"/>
+        </border>
+        <children xsi:type="gmfgraph:Label" name="EntidadeSemiEstruturadaLabelFigure" text="EntidadeSemiEstruturada"/>
+      </actualFigure>
+      <accessors accessor="getFigureEntidadeSemiEstruturadaLabelFigure" figure="//@figures.0/@descriptors.5/@actualFigure/@children.0"/>
+    </descriptors>
+    <descriptors name="EntidadeAgregadaFigure">
+      <actualFigure xsi:type="gmfgraph:Rectangle" name="EntidadeAgregadaFigure">
+        <border xsi:type="gmfgraph:MarginBorder">
+          <insets top="5" left="5" bottom="5" right="5"/>
+        </border>
+        <children xsi:type="gmfgraph:Label" name="EntidadeAgregadaLabelFigure" text="EntidadeAgregada"/>
+      </actualFigure>
+      <accessors accessor="getFigureEntidadeAgregadaLabelFigure" figure="//@figures.0/@descriptors.6/@actualFigure/@children.0"/>
     </descriptors>
     <descriptors name="RelacionamentoLinkFigure">
       <actualFigure xsi:type="gmfgraph:PolylineConnection" name="RelacionamentoLinkFigure" sourceDecoration="//@figures.0/@figures.0"/>
@@ -93,44 +88,42 @@
     <descriptors name="RelacionamentoLinkLabelFigure">
       <actualFigure xsi:type="gmfgraph:Label" name="RelacionamentoLinkLabelLabel" text="RelacionamentoLink"/>
     </descriptors>
-    <descriptors name="RelacionamentoBigDataLinkFigure">
-      <actualFigure xsi:type="gmfgraph:PolylineConnection" name="RelacionamentoBigDataLinkFigure" lineKind="LINE_DASH" sourceDecoration="//@figures.0/@figures.1"/>
-    </descriptors>
-    <descriptors name="RelacionamentoBigDataLinkLabelFigure">
-      <actualFigure xsi:type="gmfgraph:Label" name="RelacionamentoBigDataLinkLabelLabel" text="RelacionamentoBigDataLink"/>
-    </descriptors>
     <descriptors name="AtributoEntidadeLinkFigure">
       <actualFigure xsi:type="gmfgraph:PolylineConnection" name="AtributoEntidadeLinkFigure"/>
     </descriptors>
     <descriptors name="AtributoRelacionamentoLinkFigure">
       <actualFigure xsi:type="gmfgraph:PolylineConnection" name="AtributoRelacionamentoLinkFigure"/>
     </descriptors>
+    <descriptors name="RelacionamentoEntidadesAgregadasLinkFigure">
+      <actualFigure xsi:type="gmfgraph:PolylineConnection" name="RelacionamentoEntidadesAgregadasLinkFigure"/>
+    </descriptors>
+    <descriptors name="RelacionamentoNosqlEsquemaFigure">
+      <actualFigure xsi:type="gmfgraph:PolylineConnection" name="RelacionamentoNosqlEsquemaFigure"/>
+    </descriptors>
   </figures>
   <nodes name="Entidade" figure="EntidadeFigure"/>
-  <nodes name="EntidadeBigData" figure="EntidadeBigDataFigure"/>
+  <nodes name="EntidadeNaoEstruturada" figure="EntidadeNaoEstruturadaFigure"/>
   <nodes name="Atributo" figure="AtributoFigure"/>
   <nodes name="Relacionamento" figure="RelacionamentoFigure">
     <facets xsi:type="gmfgraph:DefaultSizeFacet">
       <defaultSize dx="90" dy="45"/>
     </facets>
   </nodes>
-  <nodes name="RelacionamentoBigData" figure="RelacionamentoBigDataFigure">
-    <facets xsi:type="gmfgraph:DefaultSizeFacet">
-      <defaultSize dx="90" dy="45"/>
-    </facets>
-  </nodes>
-  <nodes name="NosqlModel" figure="NosqlModelFigure"/>
+  <nodes name="NosqlEsquema" figure="NosqlEsquemaFigure"/>
+  <nodes name="EntidadeSemiEstruturada" figure="EntidadeSemiEstruturadaFigure"/>
+  <nodes name="EntidadeAgregada" figure="EntidadeAgregadaFigure"/>
   <connections name="RelacionamentoLink" figure="RelacionamentoLinkFigure"/>
-  <connections name="RelacionamentoBigDataLink" figure="RelacionamentoBigDataLinkFigure"/>
   <connections name="AtributoEntidadeLink" figure="AtributoEntidadeLinkFigure"/>
   <connections name="AtributoRelacionamentoLink" figure="AtributoRelacionamentoLinkFigure"/>
-  <compartments name="NosqlModelElementosCompartment" figure="NosqlModelFigure" accessor="//@figures.0/@descriptors.5/@accessors.1"/>
+  <connections name="RelacionamentoEntidadesAgregadasLink" figure="RelacionamentoEntidadesAgregadasLinkFigure"/>
+  <connections name="RelacionamentoNosqlEsquema" figure="RelacionamentoNosqlEsquemaFigure"/>
+  <compartments name="NosqlEsquemaElementosCompartment" figure="NosqlEsquemaFigure" accessor="//@figures.0/@descriptors.4/@accessors.1"/>
   <labels name="EntidadeLabel" figure="EntidadeFigure" accessor="//@figures.0/@descriptors.0/@accessors.0"/>
-  <labels name="EntidadeBigDataLabel" figure="EntidadeBigDataFigure" accessor="//@figures.0/@descriptors.1/@accessors.0"/>
+  <labels name="EntidadeNaoEstruturadaLabel" figure="EntidadeNaoEstruturadaFigure" accessor="//@figures.0/@descriptors.1/@accessors.0"/>
   <labels name="AtributoLabel" figure="AtributoFigure" accessor="//@figures.0/@descriptors.2/@accessors.0"/>
   <labels name="RelacionamentoLabel" figure="RelacionamentoFigure" accessor="//@figures.0/@descriptors.3/@accessors.0"/>
-  <labels name="RelacionamentoBigDataLabel" figure="RelacionamentoBigDataFigure" accessor="//@figures.0/@descriptors.4/@accessors.0"/>
-  <labels name="NosqlModelLabel" figure="NosqlModelFigure" accessor="//@figures.0/@descriptors.5/@accessors.0"/>
+  <labels name="NosqlEsquemaLabel" figure="NosqlEsquemaFigure" accessor="//@figures.0/@descriptors.4/@accessors.0"/>
+  <labels name="EntidadeSemiEstruturadaLabel" figure="EntidadeSemiEstruturadaFigure" accessor="//@figures.0/@descriptors.5/@accessors.0"/>
+  <labels name="EntidadeAgregadaLabel" figure="EntidadeAgregadaFigure" accessor="//@figures.0/@descriptors.6/@accessors.0"/>
   <labels name="RelacionamentoLinkLabel" figure="RelacionamentoLinkLabelFigure" elementIcon="false"/>
-  <labels name="RelacionamentoBigDataLinkLabel" figure="RelacionamentoBigDataLinkLabelFigure" elementIcon="false"/>
 </gmfgraph:Canvas>

@@ -5,7 +5,7 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:gmftool="http://www.eclipse.org/gmf/2005/ToolDefinition">
   <palette
-      title="bigdatamodelPalette">
+      title="polyglotmodelPalette">
     <tools
         xsi:type="gmftool:ToolGroup"
         title="Objects"
@@ -24,23 +24,49 @@
           title="Entidade"
           description="Create new Entidade">
         <smallIcon
-            xsi:type="gmftool:DefaultImage"/>
+            xsi:type="gmftool:BundleImage"
+            path="/icons/full/obj16/Entidade.gif"
+            bundle="bigdatamodel.edit"/>
         <largeIcon
             xsi:type="gmftool:DefaultImage"/>
       </tools>
       <tools
           xsi:type="gmftool:CreationTool"
-          title="EntidadeBigData"
-          description="Create new EntidadeBigData">
+          title="EntidadeAgregada"
+          description="Create new EntidadeAgregada">
         <smallIcon
-            xsi:type="gmftool:DefaultImage"/>
+            xsi:type="gmftool:BundleImage"
+            path="/icons/full/obj16/Entidade.gif"
+            bundle="bigdatamodel.edit"/>
         <largeIcon
             xsi:type="gmftool:DefaultImage"/>
       </tools>
       <tools
           xsi:type="gmftool:CreationTool"
-          title="NosqlModel"
-          description="Create new NosqlModel">
+          title="EntidadeNaoEstruturada"
+          description="Create new EntidadeNaoEstruturada">
+        <smallIcon
+            xsi:type="gmftool:BundleImage"
+            path="/icons/full/obj16/Entidade.gif"
+            bundle="bigdatamodel.edit"/>
+        <largeIcon
+            xsi:type="gmftool:DefaultImage"/>
+      </tools>
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="EntidadeSemiEstruturada"
+          description="Create new EntidadeSemiEstruturada">
+        <smallIcon
+            xsi:type="gmftool:BundleImage"
+            path="/icons/full/obj16/Entidade.gif"
+            bundle="bigdatamodel.edit"/>
+        <largeIcon
+            xsi:type="gmftool:DefaultImage"/>
+      </tools>
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="NosqlEsquema"
+          description="Create new NosqlEsquema">
         <smallIcon
             xsi:type="gmftool:DefaultImage"/>
         <largeIcon
@@ -50,15 +76,6 @@
           xsi:type="gmftool:CreationTool"
           title="Relacionamento"
           description="Create new Relacionamento">
-        <smallIcon
-            xsi:type="gmftool:DefaultImage"/>
-        <largeIcon
-            xsi:type="gmftool:DefaultImage"/>
-      </tools>
-      <tools
-          xsi:type="gmftool:CreationTool"
-          title="RelacionamentoBigData"
-          description="Create new RelacionamentoBigData">
         <smallIcon
             xsi:type="gmftool:DefaultImage"/>
         <largeIcon
@@ -89,8 +106,8 @@
       </tools>
       <tools
           xsi:type="gmftool:CreationTool"
-          title="RelacionamentoBigDataLink"
-          description="Create new RelacionamentoBigDataLink">
+          title="RelacionamentoEntidadesAgregadasLink"
+          description="Create new RelacionamentoEntidadesAgregadasLink">
         <smallIcon
             xsi:type="gmftool:DefaultImage"/>
         <largeIcon
@@ -100,6 +117,15 @@
           xsi:type="gmftool:CreationTool"
           title="RelacionamentoLink"
           description="Create new RelacionamentoLink">
+        <smallIcon
+            xsi:type="gmftool:DefaultImage"/>
+        <largeIcon
+            xsi:type="gmftool:DefaultImage"/>
+      </tools>
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="RelacionamentoNosqlEsquema"
+          description="Create new RelacionamentoNosqlEsquema">
         <smallIcon
             xsi:type="gmftool:DefaultImage"/>
         <largeIcon
