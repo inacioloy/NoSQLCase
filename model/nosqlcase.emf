@@ -81,7 +81,7 @@ enum TiposCardinalidade {
 class NosqlEsquema {
   attr TiposNosql modelobd;
 
-  @gmf.compartment(collapsible="false", width="15")
+  @gmf.compartment(collapsible="true", width="15")
   val Elemento[*] elementos;
   ref RelacionamentoNosqlEsquema[1] source;
   val RelacionamentoNosqlEsquema[*] relacionamentosnosqlesquemas;
