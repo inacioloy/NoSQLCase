@@ -1,0 +1,25 @@
+ //Código Cypher de criação dos nós (Entidades)
+[%for (schema in Schema) {%]
+   [%for (nosqlesquema in schema.modelosnosql) {%]
+   [% if (nosqlesquema.modelobd.value == 2){ %]
+   [%for (elemento in nosqlesquema.elementos) {%]
+   [%if ((elemento.type.name == "Entidade" or elemento.type.name == "EntidadeNaoEstruturada" or elemento.type.name == "EntidadeSemiEstruturada" or elemento.type.name == "EntidadeAgregada")){%]
+   [%for (atributo in nosqlesquema.atributosentidadelink) {%]
+              [%if (elemento == atributo.source) {%]
+              [%if (atributo.target.tipoatributo.value == 4) {%]CREATE ([%=atributo.target.nome%]:[%=elemento.nome%] {[%}%][%if (atributo.target.tipoatributo.value == 3){%][%=atributo.target.nome%]: ['valor', 'valor'], [%}else {%][%=atributo.target.nome%]: 'valor', [%}%] [%}%] [%}%]})
+              [%}%] [%}%]
+ [* Fim das entidades*] 
+ //Código Cypher de criação dos relacionamentos 
+ [%for (elemento in nosqlesquema.elementos) {%]
+      [%if ((elemento.type.name == "Entidade" or elemento.type.name == "EntidadeNaoEstruturada" or elemento.type.name == "EntidadeSemiEstruturada" or elemento.type.name == "EntidadeAgregada")) {%]
+    [%var a = 0;
+    var entidadeid = "";%]
+ [%for (relacionamentolink in nosqlesquema.relacionamentoslink) {%]
+              [%if (elemento == relacionamentolink.target){a = a+1;%]
+              [%for (atributo in nosqlesquema.atributosentidadelink) {%]
+              [%if (relacionamentolink.source == atributo.source)  {%]
+              [%if (atributo.target.tipoatributo.value == 4) {%]
+              [%if (a==1){%]
+              CREATE ([%=atributo.source.nome%].[%=atributo.target.nome%])-[:[%=elemento.nome%]{[%}if (a==2){%][%for (atributo in nosqlesquema.atributosrelacionamentolink) {%][%if (elemento == atributo.source) {%][%=atributo.target.nome%]: 'valor',[%}%][%}%]}]->([%=atributo.source.nome%].[%=atributo.target.nome%])
+              [%}%][%}%][%}%][%}%][%}%][%}%][%}%][%}%]
+ [%}%]   [%}%]   [%}%]

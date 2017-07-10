@@ -1,0 +1,28 @@
+[%for (schema in Schema) {%]
+[%for (nosqlesquema in schema.modelosnosql) {%]
+   [% if (nosqlesquema.modelobd.value == 3){ %]
+   [%for (elemento in nosqlesquema.elementos) {%]
+   [%if ((elemento.type.name == "Entidade" or elemento.type.name == "EntidadeNaoEstruturada" or elemento.type.name == "EntidadeSemiEstruturada" or elemento.type.name == "EntidadeAgregada")){%]
+      //Código CQL de criação da tabela [%=elemento.nome%]
+      CREATE TABLE [%=elemento.nome%](
+      [%for (atributo in nosqlesquema.atributosentidadelink) {%]
+      [%if (elemento == atributo.source) {%]
+      ADD COLUMN  [%=atributo.target.nome%] datatype,
+      [%}%]
+      [%}%]
+PRIMARY KEY ([%for (atributo in nosqlesquema.atributosentidadelink) {%]
+[%if (elemento == atributo.source and atributo.target.tipoatributo.value == 4){%]
+[%if (atributo.target.chavedeparticao = true){%]
+([%=atributo.target.nome%]),[%}else {%][%=atributo.target.nome%],[%}%][%}%][%}%]));[%}%]
+[%}%]
+[%}%]
+[%}%]
+[%}%]
+[%
+operation isEmpty (object) {
+   if(object.size > 0){
+      return false;
+   }
+   return true;
+}
+%]
