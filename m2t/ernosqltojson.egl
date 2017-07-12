@@ -2,6 +2,7 @@
 [%for (nosqlesquema in schema.modelosnosql) {%]
    [% if (nosqlesquema.modelobd.value == 4){ %]
    [%var elem = null;%]
+   [%var rel = null;%]
    [%for (elemento in nosqlesquema.elementos) {%]
    [%if ((elemento.type.name == "Entidade" or elemento.type.name == "EntidadeNaoEstruturada" or elemento.type.name == "EntidadeSemiEstruturada" )) {%]
    [%elem = elemento;%]
@@ -15,8 +16,8 @@
       [%}%]
       }
 [%} else if (elemento.type.name == "EntidadeAgregada") {%]
+    [%if (rel == null) {%]
  {
- [%=elemento%]
           "[%=elemento.nome%]": {
       [%for (atributo in nosqlesquema.atributosentidadelink) {%]
       [%if (elemento == atributo.source) {%]
@@ -24,21 +25,26 @@
       [%}%]
       [%}%]
       [%}%]
-	[%for (relacionamentoagregacao in nosqlesquema.relacionamentosentidadesagregadas) {%]
-	"aqui"
-       "[%=relacionamentoagregacao.target.nome%]": 
+		[%for (relacionamentoagregacao in nosqlesquema.relacionamentosentidadesagregadas) {%]
+	[%rel = relacionamentoagregacao.target[0].nome;%]
+	[%if (relacionamentoagregacao.cardinalidade.value == 1) {%]
+	"[%=relacionamentoagregacao.target[0].nome%]": [
+	  {
       [%for (atributo in nosqlesquema.atributosentidadelink) {%]
-      {
-      [%if (relacionamentoagregacao.target.nome == atributo.source) {%]
+      [%if (relacionamentoagregacao.target[0] == atributo.source) {%]
       "[%=atributo.target.nome%]" : "valor"[%if (atributo <> nosqlesquema.atributosentidadelink.last()){%],
       [%}%]
       [%}%]
-      [%}%]
-      },
-     	 [%}%]
-     	 
-		
+      [%}%] },
+      ],
+      [%} else { %]	"[%=relacionamentoagregacao.target[0].nome%]": {
+      [%for (atributo in nosqlesquema.atributosentidadelink) {%]
+      [%if (relacionamentoagregacao.target[0] == atributo.source) {%]
+      "[%=atributo.target.nome%]" : "valor"[%if (atributo <> nosqlesquema.atributosentidadelink.last()){%],
+      [%}%][%}%][%}%] },
+      [%}%][%}%]
 [%}%]
+[%}%] 
 [%}%]
 [%}%]
       }
